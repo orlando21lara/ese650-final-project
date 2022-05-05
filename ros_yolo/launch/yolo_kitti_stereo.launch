@@ -1,0 +1,13 @@
+<launch>
+    <node name="ros_yolo_left" pkg="ros_yolo" type="final_yolo.py" output="screen">
+	<remap from="/color/image_rect" to="/kitti_player/color/left/image_rect" />
+	<remap from="/yolo_img_result" to="/yolo/left/img_result" />
+	<remap from="/yolo_pred_result" to="yolo/left/pred_result" />
+    </node>
+
+    <node name="ros_yolo_right" pkg="ros_yolo" type="final_yolo.py" output="screen">
+	<remap from="/color/image_rect" to="/kitti_player/color/right/image_rect" />
+	<remap from="/yolo_img_result" to="/yolo/right/img_result" />
+	<remap from="/yolo_pred_result" to="yolo/right/pred_result" />
+    </node>
+</launch>

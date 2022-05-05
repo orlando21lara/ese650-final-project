@@ -1,0 +1,9 @@
+digraph G {
+"map" -> "base_link"[label=" Broadcaster: /orb_slam2_stereo\nAverage rate: 5.182\nBuffer length: 4.825\nMost recent transform: 1651726276.011\nOldest transform: 1651726271.186\n"];
+"orbslam_link" -> "camera_link"[label=" Broadcaster: /orbslam_link_to_camera_link_broadcaster\nAverage rate: 10.194\nBuffer length: 4.905\nMost recent transform: 1651726276.369\nOldest transform: 1651726271.464\n"];
+"base_link" -> "orbslam_link"[label=" Broadcaster: /base_link_to_orbslam_link_broadcaster\nAverage rate: 10.194\nBuffer length: 4.905\nMost recent transform: 1651726276.394\nOldest transform: 1651726271.49\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1651726276.3394227"[ shape=plaintext ] ;
+}->"map";
+}

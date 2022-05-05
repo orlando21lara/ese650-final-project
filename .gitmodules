@@ -1,0 +1,6 @@
+[submodule "kitti_player"]
+	path = kitti_player
+	url = https://github.com/orlando21lara/kitti_player.git
+[submodule "orb_slam_2_ros"]
+	path = orb_slam_2_ros
+	url = https://github.com/orlando21lara/orb_slam_2_ros.git

@@ -1,0 +1,13 @@
+<launch>
+    <node name="semantic_slam_node" pkg="semantic_slam" type="semantic_slam_pipeline.py" output="screen" >
+	<remap from="/left/image_rect" to="/kitti_player/color/left/image_rect" />
+	<remap from="/right/image_rect" to="/kitti_player/color/right/image_rect" />
+	<remap from="/left_prediction" to="/yolo/left/pred_result" />
+	<remap from="/right_prediction" to="/yolo/right/pred_result" />
+	<remap from="/robot_pose" to="/orb_slam2_stereo/pose" />
+
+	<param name="timeout_duration" type="double" value="5.0" />  <!-- in seconds -->
+	<param name="manual_sync" type="bool" value="False" />
+	<param name="loop_rate" type="double" value="5.0" />	    <!-- in hz -->
+    </node>
+</launch>
