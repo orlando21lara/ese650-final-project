@@ -34,3 +34,23 @@ roslaunch kitti_player kittiplayer_sync.launch
 roslaunch ros_yolo yolo_kitti_stereo.launch
 roslaunch semantic_slam semantic_slam.launch
 ```
+
+## Results
+Here are a few images from the obtained results. In these images the red arrow corresponds to the current pose of the driving car while the white dots are the projected feature points provided by ORB-SLAM2. In the top left, we can see the left and right stereo images that are input into the pipeline at that point in time and on the right we can see the outputs from the ORB-SLAM node and the YOLO predictions. The semantic labels that are projected into the 3D space as colored points with the following meanings:
+
+Color  | Label
+------ | -----------
+Red    | Person
+Blue   | Bicycle
+Orange | Car
+Pink   | Motorcycle
+Brown  | Bus
+Teal   | Truck
+
+![Kiku](images/fig1.png)
+![Kiku](images/fig2.png)
+![Kiku](images/fig3.png)
+![Kiku](images/fig4.png)
+![Kiku](images/fig5.png)
+
+
